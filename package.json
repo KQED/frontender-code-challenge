@@ -1,0 +1,56 @@
+{
+  "name": "frontender-code-challenge",
+  "version": "1.0.0",
+  "description": "A small node/react project to skill check frontend applicants",
+  "main": "index.js",
+  "author": "",
+  "packageManager": "yarn@1.22.19",
+  "engines": {
+    "node": ">=16.20.0",
+    "npm": "^8.19.4",
+    "yarn": "1.22.19"
+  },
+  "scripts": {
+    "clean": "rimraf static/dist/*",
+    "build:csr": "webpack --config webpack/webpack.client.config.js",
+    "watch:csr": "webpack watch --config webpack/webpack.client.config.js",
+    "run:csr": "node ./servers/server.csr.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KQED/frontender-code-challenge.git"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/eslint-parser": "^7.23.3",
+    "@babel/plugin-transform-react-inline-elements": "^7.23.3",
+    "@babel/plugin-transform-runtime": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@reduxjs/toolkit": "^1.9.7",
+    "babel-loader": "^9.1.3",
+    "cross-fetch": "^4.0.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-webpack-plugin": "^4.0.1",
+    "express": "^4.18.2",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.3",
+    "react-router-dom": "^6.19.0",
+    "redux": "^4.2.1",
+    "sass": "^1.69.5",
+    "sass-lint-webpack": "^1.0.4",
+    "sass-loader": "^13.3.2",
+    "source-map-loader": "^4.0.1",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

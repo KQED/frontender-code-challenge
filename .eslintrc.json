@@ -1,0 +1,107 @@
+{
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "overrides": [
+      {
+        "files": ["*.jsx", "*.js"]
+      }
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "globals": { // ignore global variables
+      "__DEFAULT_LAT": true,
+      "__DEFAULT_LNG": true,
+      "__MAP_DATA_URL": true,
+      "__MAPBOX_PUBLIC_TOKEN": true,
+      "__GMAP_API_KEY": true,
+      "__GMAP_URL": true
+    }, 
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "requireConfigFile": false,
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "babelOptions": {
+        "presets": ["@babel/preset-react"]
+      }
+    },
+    "plugins": [
+      "react"
+    ],
+    "parser": "@babel/eslint-parser",
+    // This may need to change. The goal is to ignore the double quotes on .json files. Might need another pair of eyes on this.
+    "ignorePatterns": ["*json"],
+    "rules": {
+      "space-before-function-paren": [
+        "error", {
+          "anonymous": "always",
+          "named": "always",
+          "asyncArrow": "always"
+        }
+      ],
+      "space-before-blocks": "error",
+      "arrow-spacing": [
+        "error",
+        { "before": true, "after": true }
+      ],
+      "key-spacing": 0,
+      "jsx-quotes": [
+        2,
+        "prefer-single"
+      ],
+      "max-len": [
+        2,
+        120,
+        2,
+        {
+          "ignoreStrings": true 
+        }
+      ],
+      "object-curly-spacing": [
+        2,
+        "always"
+      ],
+      "camelcase": [
+        "error",
+        {
+          "allow": [
+            "UNSAFE_componentWillMount",
+            "UNSAFE_componentWillReceiveProps",
+            "stream_live"
+          ]
+        }
+      ],
+      "indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  }
